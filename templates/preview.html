@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Resume Preview - AI Career Intelligence</title>
+
+    <link
+        rel="stylesheet"
+        href="{{ url_for('static', filename='css/style.css') }}"
+    >
+</head>
+
+<body>
+
+    <main class="container">
+
+        <section class="resume-preview">
+
+            <div class="preview-header">
+                <h1>Resume Preview</h1>
+
+                <p>
+                    Extracted resume text from your uploaded PDF
+                </p>
+            </div>
+
+            <div class="resume-content">
+
+                <pre>{{ resume_text }}</pre>
+
+            </div>
+
+            <div class="preview-actions">
+
+                <a href="{{ url_for('home') }}" class="button">
+                    Upload Another Resume
+                </a>
+
+            </div>
+
+        </section>
+
+    </main>
+
+</body>
+
+</html>

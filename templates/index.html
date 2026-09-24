@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>AI Career Intelligence & Job Matching Platform</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+
+<body>
+<body>
+
+    <body>
+
+    {% with messages = get_flashed_messages() %}
+        {% if messages %}
+            <div class="messages">
+                {% for message in messages %}
+                    <div class="alert">
+                        {{ message }}
+                    </div>
+                {% endfor %}
+            </div>
+        {% endif %}
+    {% endwith %}
+
+    <main class="container">
+
+    <main class="container">
+    <main class="container">
+
+        <!-- Header -->
+        <section class="hero">
+
+            <div class="badge">
+                AI-Powered Career Platform
+            </div>
+
+            <h1>
+                AI Career Intelligence
+                <span>& Job Matching Platform</span>
+            </h1>
+
+            <p class="description">
+                Upload your resume and let our platform extract your
+                professional information. This information will be used
+                in later stages for intelligent career analysis and
+                job matching.
+            </p>
+
+        </section>
+
+
+        <!-- Resume Upload Card -->
+        <section class="upload-card">
+
+            <div class="upload-icon">
+                📄
+            </div>
+
+            <h2>Analyze Your Resume</h2>
+
+            <p class="upload-description">
+                Upload your resume in PDF format to begin your career analysis.
+            </p>
+
+            <form action="/analyze" method="POST" enctype="multipart/form-data">
+
+                <div class="file-area">
+
+                    <label for="resume">
+                        <span class="file-icon">📁</span>
+
+                        <span class="file-title">
+                            Choose your resume
+                        </span>
+
+                        <span class="file-subtitle">
+                            PDF files only
+                        </span>
+                    </label>
+
+                    <input
+                        type="file"
+                        id="resume"
+                        name="resume"
+                        accept=".pdf,application/pdf"
+                        required
+                    >
+
+                </div>
+
+
+                <div class="supported-info">
+
+                    <strong>Supported file format:</strong>
+
+                    <span>PDF (.pdf)</span>
+
+                    <small>
+                        Please upload a readable PDF resume.
+                    </small>
+
+                </div>
+
+
+                <button type="submit" class="analyze-btn">
+                    Analyze Resume
+                    <span>→</span>
+                </button>
+
+            </form>
+
+        </section>
+
+
+        <!-- Information -->
+        <section class="features">
+
+            <div class="feature">
+                <div class="feature-icon">🔒</div>
+
+                <h3>Secure Upload</h3>
+
+                <p>
+                    Your resume is processed securely by the application.
+                </p>
+            </div>
+
+
+            <div class="feature">
+                <div class="feature-icon">⚡</div>
+
+                <h3>Quick Analysis</h3>
+
+                <p>
+                    Resume text can be extracted quickly for further analysis.
+                </p>
+            </div>
+
+
+            <div class="feature">
+                <div class="feature-icon">🤖</div>
+
+                <h3>AI Ready</h3>
+
+                <p>
+                    The extracted information will support future AI
+                    career matching features.
+                </p>
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <footer>
+        <p>
+            © 2026 AI Career Intelligence & Job Matching Platform
+        </p>
+    </footer>
+
+</body>
+</html>
+

@@ -1,0 +1,224 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f4f7fb;
+    color: #172033;
+    min-height: 100vh;
+}
+
+.container {
+    width: 90%;
+    max-width: 1100px;
+    margin: auto;
+    padding: 60px 0;
+}
+
+.hero {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.badge {
+    display: inline-block;
+    background: #e8f0ff;
+    color: #3155a6;
+    padding: 8px 18px;
+    border-radius: 30px;
+    font-size: 14px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.hero h1 {
+    font-size: 42px;
+    line-height: 1.2;
+    margin-bottom: 20px;
+}
+
+.hero h1 span {
+    display: block;
+    color: #4169e1;
+}
+
+.hero p {
+    max-width: 700px;
+    margin: auto;
+    color: #667085;
+    font-size: 17px;
+    line-height: 1.7;
+}
+
+.upload-card {
+    background: white;
+    max-width: 700px;
+    margin: auto;
+    padding: 45px;
+    border-radius: 20px;
+    box-shadow: 0 15px 40px rgba(0,0,0,0.08);
+    text-align: center;
+}
+
+.upload-icon {
+    font-size: 45px;
+    margin-bottom: 15px;
+}
+
+.upload-card h2 {
+    font-size: 28px;
+    margin-bottom: 10px;
+}
+
+.upload-card > p {
+    color: #667085;
+    margin-bottom: 30px;
+}
+
+.file-area {
+    border: 2px dashed #b8c4d9;
+    border-radius: 14px;
+    padding: 35px 20px;
+    margin-bottom: 20px;
+}
+
+.file-area label {
+    display: block;
+    cursor: pointer;
+}
+
+.file-icon {
+    font-size: 35px;
+    margin-bottom: 10px;
+}
+
+.file-title {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.file-subtitle {
+    color: #667085;
+    font-size: 14px;
+    margin-top: 6px;
+}
+
+.file-area input {
+    margin-top: 20px;
+}
+
+.supported-info {
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+    background: #f8fafc;
+    padding: 15px;
+    border-radius: 10px;
+    margin-bottom: 25px;
+    text-align: left;
+}
+
+.supported-info span {
+    color: #4169e1;
+    font-weight: bold;
+}
+
+.supported-info small {
+    color: #667085;
+}
+
+.analyze-btn {
+    width: 100%;
+    border: none;
+    border-radius: 10px;
+    padding: 16px;
+    background: #4169e1;
+    color: white;
+    font-size: 17px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.analyze-btn:hover {
+    background: #3155c5;
+}
+
+.features {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    margin-top: 40px;
+}
+
+.feature {
+    background: white;
+    padding: 25px;
+    border-radius: 15px;
+    text-align: center;
+}
+
+.feature-icon {
+    font-size: 30px;
+    margin-bottom: 12px;
+}
+
+.feature h3 {
+    margin-bottom: 8px;
+}
+
+.feature p {
+    color: #667085;
+    font-size: 14px;
+}
+
+footer {
+    text-align: center;
+    padding: 25px;
+    color: #667085;
+}
+
+@media (max-width: 768px) {
+
+    .hero h1 {
+        font-size: 32px;
+    }
+
+    .upload-card {
+        padding: 30px 20px;
+    }
+
+    .features {
+        grid-template-columns: 1fr;
+    }
+}
+.messages {
+    width: 90%;
+    max-width: 700px;
+    margin: 20px auto 0;
+}
+
+.message {
+    background: #fff3cd;
+    border: 1px solid #ffc107;
+    color: #664d03;
+    padding: 14px 18px;
+    border-radius: 10px;
+    text-align: center;
+    font-weight: 600;
+}
+.messages {
+    max-width: 900px;
+    margin: 20px auto;
+}
+
+.alert {
+    padding: 15px 20px;
+    background: #fff3cd;
+    border: 1px solid #ffc107;
+    border-radius: 8px;
+    color: #664d03;
+    font-weight: 500;
+}
