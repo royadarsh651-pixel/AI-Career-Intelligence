@@ -1,3 +1,4 @@
+"""AI Career Intelligence Flask application."""
 import os
 
 from flask import Flask, render_template, request, flash, redirect, url_for
@@ -19,7 +20,8 @@ app.config["UPLOAD_FOLDER"] = UPLOAD_FOLDER
 app.config["MAX_CONTENT_LENGTH"] = MAX_FILE_SIZE
 
 @app.errorhandler(413)
-def file_too_large(error):
+def file_too_large(_error):
+    """Handle files that exceed the maximum upload size."""
     flash("File is too large. Maximum allowed size is 5 MB.")
     return redirect(url_for("home"))
 
@@ -38,10 +40,12 @@ def allowed_file(filename):
 
 @app.route("/")
 def home():
+    """Display the home page."""
     return render_template("index.html")
 
 @app.route("/analyze", methods=["POST"])
 def analyze():
+    """Handle resume upload, validation, and PDF text extraction."""
 
     # Check whether a file was submitted
     if "resume" not in request.files:
@@ -94,7 +98,7 @@ def analyze():
             resume_text=resume_text
         )
 
-    except Exception as e:
+    except Exception as e:  # pylint: disable=broad-exception-caught
         print("PDF extraction error:", e)
         flash("The PDF was uploaded, but text extraction failed.")
         return redirect(url_for("home"))
